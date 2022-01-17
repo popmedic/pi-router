@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$VALIDATE_JSON_PATH="/Library/WebServer/Documents/speedboost/validate.json";
+$VALIDATE_JSON_PATH="/var/www/html/speedboost/validate.json";
 
 if (!file_exists($VALIDATE_JSON_PATH)) {
     $error = array(
