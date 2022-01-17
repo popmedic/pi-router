@@ -1,7 +1,7 @@
 # start
 echo -e "\e[33m### ALLOW PORT FORWARDING ###\e[0m"
 sudo sysctl -w net.ipv4.ip_forward=1
-sduo sysctl -w net.ipv6.conf.all.forwarding=1
+sudo sysctl -w net.ipv6.conf.all.forwarding=1
 echo -e "\e[33m### SET-UP NETWORK INTERFACES ###\e[0m"
 sudo ifup --force eth0
 sudo ifup --force wlan0
