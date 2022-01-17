@@ -74,6 +74,10 @@ sudo systemctl start apache2
 
 echo -e "\e[33m### INSTALLING PHP ###\e[0m"
 sudo apt-get install php -y
+
+echo -e "\e[33m### COPYING PHP PROJECT ###\e[0m"
+sudo cp -r var/www/html /var/www/html
+
 echo -e "\e[33m### RESTART APACHE ###\e[0m"
 sudo systemctl restart apache2
 
