@@ -16,6 +16,12 @@ sudo cp -r /etc/default/hostapd /etc/default/hostapd.backup
 sudo cp -rf etc/hostapd /etc/
 sudo cp etc/default/hostapd /etc/default/hostapd
 
+echo -e "\e[33m### INSTALL OUR INTERFACES ###\e[0m"
+sudo ifdown --force wlan0
+sudo ifdown --force eth0
+sudo mv /etc/network/interfaces /etc/network/interfaces.backup
+sudo cp -f etc/network/interfaces /etc/network/
+
 echo -e "\e[33m### DISABLE DEFAULT DHCPCD ###\e[0m"
 sudo systemctl disable dhcpcd
 
