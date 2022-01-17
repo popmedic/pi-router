@@ -76,10 +76,10 @@ echo -e "\e[33m### INSTALLING PHP ###\e[0m"
 sudo apt-get install php -y
 
 echo -e "\e[33m### COPYING PHP PROJECT ###\e[0m"
-sudo cp -r var/www/html /var/www/html
+sudo cp -r var/www/html /var/www/
 
 echo -e "\e[33m### RESTART APACHE ###\e[0m"
 sudo systemctl restart apache2
 
 echo -e "\e[33m### COMPLETE ###\e[0m"
-echo -e "\e[33m### TO START - 'sudo sh scripts/start' ###\e[0m"
+echo "\e[33m### TO START - 'sh scripts/start.sh' ###\e[0m"
