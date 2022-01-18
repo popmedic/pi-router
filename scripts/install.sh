@@ -77,6 +77,7 @@ sudo apt-get install php -y
 
 echo "\e[33m### COPYING PHP PROJECT ###\e[0m"
 sudo cp -r var/www/html /var/www/
+sudo chmod 777 /var/www/html/speedtest/validate.json
 
 echo "\e[33m### RESTART APACHE ###\e[0m"
 sudo systemctl restart apache2
