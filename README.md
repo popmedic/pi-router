@@ -14,7 +14,7 @@
 - These scripts will use:
     - Router IPv4 `192.168.1.1`
     - Router NAT Subnet `192.168.1.0/24`
-    - Router IPv6 lab network `2001:db8::/128`
+    - Router IPv6 lab network `2001:db8::/64`
     - SSID "Spectrum Mobile"
     - WPA2 passphase "spectrum"
 
