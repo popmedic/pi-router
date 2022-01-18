@@ -6,19 +6,11 @@
 # Include files from /etc/network/interfaces.d:
 #source-directory /etc/network/interfaces.d
 
-#auto br0
-#iface br0 inet manual
-#bridge_ports eth0 wlan0
-
 auto lo
 iface lo inet loopback
 
 auto eth0
 iface eth0 inet dhcp
-
-#iface eth0 inet6 static
-# address 2001:db8::1
-# netmask 64
 
 allow-hotplug wlan0
 
@@ -30,12 +22,7 @@ iface wlan0 inet6 static
  address 2001:db8::2
  netmask 64
 
-auto wlan1
-iface wlan1 inet dhcp
- wpa-ssid "FortNavajo"
- wpa-psk "skateboard"
-
-# iface wlan1 inet6 dhcp
-# wpa-ssid "FortNavajo"
-# wpa-psk "skateboard
-#up iptables-restore < /etc/iptables.ipv4.nat
+# auto wlan1
+# iface wlan1 inet dhcp
+#  wpa-ssid ""
+#  wpa-psk ""
