@@ -76,8 +76,7 @@ echo "\e[33m### START APACHE BACK UP ###\e[0m"
 sudo systemctl start apache2
 
 echo "\e[33m### INSTALLING PHP ###\e[0m"
-sudo apt install php7.4 libapache2-mod-php7.4 php7.4-mbstring php7.4-mysql php7.4-curl php7.4-gd php7.4-zip -y
-sudo a2enmod php7.4
+sudo apt install php -y
 
 echo "\e[33m### COPYING PHP PROJECT ###\e[0m"
 sudo cp -r var/www/html /var/www/
