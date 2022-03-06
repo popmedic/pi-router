@@ -69,6 +69,9 @@ sudo openssl req \
     -subj "/C=US/ST=Colorado/L=Denver/O=IT/CN=pirouter.net" \
     -keyout /etc/ssl/private/apache-selfsigned.key \
     -out /etc/ssl/certs/apache-selfsigned.crt
+
+echo "\e[33m### ALLOW APACHE REWRITE ###\e[0m"
+sudo a2enmod rewrite
 echo "\e[33m### START APACHE BACK UP ###\e[0m"
 sudo systemctl start apache2
 
@@ -77,9 +80,7 @@ sudo apt-get install php -y
 
 echo "\e[33m### COPYING PHP PROJECT ###\e[0m"
 sudo cp -r var/www/html /var/www/
-sudo chmod 777 /var/www/html/speedboost/validate.json
-echo "\e[33m### ALLOW APACHE REWRITE ###\e[0m"
-sudo a2enmod rewrite
+sudo chmod -R 777 /var/www/html
 echo "\e[33m### RESTART APACHE ###\e[0m"
 sudo systemctl restart apache2
 
