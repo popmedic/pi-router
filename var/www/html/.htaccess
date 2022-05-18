@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule "^routerInfo$" "/routerInfo.json"
+RewriteRule "routerInfo" "/info.json"
